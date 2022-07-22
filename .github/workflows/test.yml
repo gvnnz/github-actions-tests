@@ -1,0 +1,12 @@
+name: Test
+
+on: [push]
+
+jobs:
+  linux:
+    name: Linux test
+    runs-on: ubuntu-18.04
+    timeout-minutes: 60
+    steps:
+      - name: Echo env vars
+        run: echo $GITHUB_REF_NAME
