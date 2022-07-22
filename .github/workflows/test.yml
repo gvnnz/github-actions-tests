@@ -17,4 +17,4 @@ jobs:
           submodules: recursive
 
       - name: Echo env vars
-        run: python3 test.py --version=1.2.3
+        run: python3 test.py --version=$GITHUB_REF_NAME
