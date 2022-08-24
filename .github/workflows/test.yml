@@ -41,7 +41,7 @@ jobs:
         run: |
           python3 test.py --version=${{ github.ref_name }}
           python3 test.py --version=$TAG_NAME
-          cat "xxx" >> artifact.txt
+          echo "xxx" >> artifact.txt
 
       - name: Upload release
         id: upload-release-asset
