@@ -24,7 +24,6 @@ jobs:
           draft: true
           prerelease: false
 
-
   linux:
     name: Linux test
     runs-on: ubuntu-18.04
@@ -38,10 +37,8 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Echo env vars
+      - name: Generate artifact
         run: |
-          python3 test.py --version=${{ github.ref_name }}
-          python3 test.py --version=$TAG_NAME
           echo "xxx" >> artifact.txt
 
       - name: Upload release
